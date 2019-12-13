@@ -10,8 +10,7 @@ ENV GRADLE_HOME=/opt/gradle/gradle-5.0
 ENV PATH=${GRADLE_HOME}/bin:${PATH}
 RUN gradle -v
 RUN yes | sdkmanager --licenses || true
-RUN npm i ionic
-RUN npm i @angular/cli
+RUN npm i -g @angular/cli
 RUN npm i -g ionic
-RUN npm i cordova
-RUN npm i cordova-res --unsafe-perm
+RUN npm i -g cordova
+RUN npm i -g cordova-res --unsafe-perm
